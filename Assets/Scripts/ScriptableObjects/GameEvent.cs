@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu]
+public class GameEvent : ScriptableObject {
+
+    private List<GameEventListener> listeners = new List<GameEventListener>();
+
+    public void Raise()
+    {
+        Debug.Log("Event risen: " + name);
+        for(int i = listeners.Count - 1; i >=0; i--)
+        {
+            listeners[i].OnEventRaised();
+        }
+    }
+
+    public void RegisterListener(GameEventListener l)
+    {
+        if (!listeners.Contains(l))
+            listeners.Add(l);
+    }
+
+    public void UnregisterListener(GameEventListener l)
+    {
+        if (listeners.Contains(l))
+            listeners.Remove(l);
+    }
+}
