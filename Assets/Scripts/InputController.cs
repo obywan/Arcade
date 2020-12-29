@@ -111,6 +111,6 @@ public class InputController : MonoBehaviour
 
     private bool CheckScreenOffset(Vector2 mp)
     {
-        return mp.x < leftScreenOffset || mp.x > Screen.width - rightScreenOffset || mp.y > Screen.height - topScreenOffset || mp.y < bottomScreenOffset;
+        return mp.x < ScreenHepler.InputLimits.x || mp.x > ScreenHepler.InputLimits.width || mp.y < ScreenHepler.InputLimits.y || mp.y > ScreenHepler.InputLimits.height;
     }
 }

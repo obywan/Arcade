@@ -92,7 +92,7 @@ public class PuckController : MonoBehaviour
 
     private void ProcessContacts()
     {
-        Debug.Log(contactPoints.Count);
+        //Debug.Log(contactPoints.Count);
 
         Vector2 result = Vector2.zero;
 
