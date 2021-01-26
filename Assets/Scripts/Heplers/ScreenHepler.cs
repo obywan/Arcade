@@ -17,6 +17,8 @@ namespace Assets.Scripts.Heplers
         private static Rect inputLimits;
         private static bool ilSet = false;
 
+        private static float deadlineY = 0f;
+
         public static Rect WorldLimits 
         { 
             get 
@@ -37,6 +39,8 @@ namespace Assets.Scripts.Heplers
             } 
         }
 
+        public static float DeadlineY { get => deadlineY; }
+
         private static void SetUpWorldLimits()
         {
             Vector2 topRightCorner = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
@@ -51,6 +55,9 @@ namespace Assets.Scripts.Heplers
                 Screen.height * (INPUT_OFFSET_B / 100f), 
                 Screen.width - (Screen.width * INPUT_OFFSET_R / 100f), 
                 Screen.height - (Screen.height * INPUT_OFFSET_T / 100f));
+
+            deadlineY = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width / 2, inputLimits.height + 50f)).y;
+
             ilSet = true;
         }
     }

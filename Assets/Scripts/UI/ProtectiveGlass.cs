@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ProtectiveGlass : MonoBehaviour
 {
+    public static float Deadline_Height = 32f;
+
     void Start()
     {
         SetUpImageRect();

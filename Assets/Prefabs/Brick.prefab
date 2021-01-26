@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {fileID: 11400000, guid: 535b38298ce8da849962c1f8aaa16e02, type: 2}
+  gameoverEvent: {fileID: 11400000, guid: c5852ac57ef95d84c89d341c55eb4eee, type: 2}
 --- !u!61 &3022972113777641806
 BoxCollider2D:
   m_ObjectHideFlags: 0
