@@ -43,10 +43,11 @@ public class PuckController : MonoBehaviour
         StartCoroutine(ApplyBounce());
     }
 
-    public void Grab()
+    public void Grab(Vector2 p)
     {
         free = false;
         rb2d.velocity = Vector2.zero;
+        targetPos = p;
     }
 
     public void Drag(Vector2 p)
@@ -92,8 +93,6 @@ public class PuckController : MonoBehaviour
 
     private void ProcessContacts()
     {
-        //Debug.Log(contactPoints.Count);
-
         Vector2 result = Vector2.zero;
 
         for(int i = 0; i < contactPoints.Count; i++)
