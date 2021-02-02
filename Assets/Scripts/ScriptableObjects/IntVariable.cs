@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu]
-public class IntVariable : ScriptableObject
+public class IntVariable : ScriptableObject, IHaveStringValue
 {
     [SerializeField] private GameEvent onChangeEvent;
-    private int value;
+    public int value;
 
     public int Value
     {
@@ -19,4 +19,6 @@ public class IntVariable : ScriptableObject
                 onChangeEvent.Raise();
         }
     }
+
+    public string GetStringValue => value.ToString();
 }

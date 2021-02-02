@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public interface OnScreenVFX
+public interface IOnScreenVFX
 {
     void SpawnFX(Vector2 screenPosition);
 }

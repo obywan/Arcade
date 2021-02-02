@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd424e724ece4d4fb606613a121e1c3, type: 3}
   m_Name: BrickSpeed
   m_EditorClassIdentifier: 
-  Value: 0.04
+  value: 0.04

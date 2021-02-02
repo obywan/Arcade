@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DamageFX : OnScreenVFX
+public class DamageFX : IOnScreenVFX
 {
 
     public void SpawnFX(Vector2 screenPosition)

@@ -43,8 +43,9 @@ namespace Assets.Scripts.Heplers
 
         private static void SetUpWorldLimits()
         {
-            Vector2 topRightCorner = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-            worldLimits = new Rect(-topRightCorner.x, -topRightCorner.y, topRightCorner.x, topRightCorner.y);
+            Vector2 topRightCorner = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height - Screen.height * 0.08f));
+            Vector2 bottomLeftCorner = Camera.main.ScreenToWorldPoint(Vector2.zero);
+            worldLimits = new Rect(bottomLeftCorner.x, bottomLeftCorner.y, topRightCorner.x, topRightCorner.y);
             wlSet = true;
         }
         
