@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchBoots: 500
   maxSpeed: 10
+  score: {fileID: 11400000, guid: e03ac5e9e5c69ec4385e134013e66ffc, type: 2}
 --- !u!58 &4019511351277040623
 CircleCollider2D:
   m_ObjectHideFlags: 0

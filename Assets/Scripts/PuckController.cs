@@ -6,9 +6,12 @@ using System.Collections.Generic;
 public class PuckController : MonoBehaviour
 {
     public const string PUCK_TAG = "Puck";
+    private const int DEFAULT_DAMAGE = 1;
 
     public float launchBoots = 10f;
     public float maxSpeed = 10f;
+
+    [SerializeField] private IntVariable score;
 
     private Rigidbody2D rb2d;
     private bool free = true;
@@ -107,7 +110,10 @@ public class PuckController : MonoBehaviour
     private void DealDamage(int index)
     {
         if (contactPoints[index].collider.gameObject.CompareTag(Brick.BRICK_TAG))
-            contactPoints[index].collider.gameObject.GetComponent<Brick>()?.TakeDamage(1);
+        {
+            contactPoints[index].collider.gameObject.GetComponent<Brick>()?.TakeDamage(DEFAULT_DAMAGE);
+            score.Value += DEFAULT_DAMAGE;
+        }
     }
 
     /// <summary>
