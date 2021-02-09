@@ -15,6 +15,7 @@ namespace Assets.Scripts
             if(transform.position.y < ScreenHepler.DeadlineY)
             {
                 Debug.Log("GameOver");
+                gameoverEvent?.Raise();
             }
         }
     }

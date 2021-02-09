@@ -18,14 +18,29 @@ namespace Assets.Scripts
         private int maxHealth = 6;
         private int enemiesCOunter = 0;
 
+        private bool postponeSpawning = false;
+
+        public bool PostponeSpawning { get => postponeSpawning; set => postponeSpawning = value; }
+
+        public void HideAllEnemies()
+        {
+            for(int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
+        }
+
         private void Start()
         {
             totalNumber = Mathf.FloorToInt((ScreenHepler.WorldLimits.width - ScreenHepler.WorldLimits.x) / brick_width);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            innerTimer += Time.fixedDeltaTime;
+            if (postponeSpawning)
+                return;
+
+            innerTimer += Time.deltaTime;
 
             if (innerTimer >= spawnDelay)
             {

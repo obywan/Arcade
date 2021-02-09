@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameScore
   m_EditorClassIdentifier: 
   onChangeEvent: {fileID: 11400000, guid: 443406febce2df24e9d1d32e8a194940, type: 2}
-  value: 0
+  value: 1

@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bd424e724ece4d4fb606613a121e1c3, type: 3}
-  m_Name: BrickSpeed
+  m_Script: {fileID: 11500000, guid: 626bfd88569053443a832e819163356f, type: 3}
+  m_Name: ResetGame
   m_EditorClassIdentifier: 
-  value: 0.18
